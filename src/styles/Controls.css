@@ -1,0 +1,158 @@
+.controls-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.controls-header h3 {
+  color: var(--dark-color);
+  font-size: 1.25rem;
+}
+
+.speed-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--light-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.controls-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.play-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.play-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.pause-btn {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.pause-btn:hover {
+  background-color: #d11a6f;
+  transform: translateY(-2px);
+}
+
+.reset-btn {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.reset-btn:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.speed-control {
+  margin-bottom: 1.5rem;
+}
+
+.speed-control label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.speed-control input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  background: var(--light-color);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.speed-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.speed-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.progress-tracker {
+  margin-top: 1rem;
+}
+
+.progress-tracker label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), var(--success-color));
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+@media (max-width: 576px) {
+  .controls-buttons {
+    flex-direction: column;
+  }
+  
+  .control-btn {
+    width: 100%;
+  }
+}

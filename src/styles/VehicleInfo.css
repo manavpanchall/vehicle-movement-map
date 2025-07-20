@@ -1,0 +1,126 @@
+.vehicle-info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  height: 100%;
+}
+
+.vehicle-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.vehicle-info-header h3 {
+  color: var(--dark-color);
+  font-size: 1.25rem;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-dot.active {
+  background-color: var(--success-color);
+  box-shadow: 0 0 8px rgba(76, 201, 240, 0.6);
+}
+
+.status-dot.inactive {
+  background-color: #adb5bd;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+}
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content label {
+  display: block;
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.info-content p {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0;
+}
+
+.progress-section {
+  background-color: var(--light-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.progress-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-value {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.no-data-message p {
+  font-size: 1.1rem;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.no-data-message small {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
